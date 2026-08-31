@@ -1,0 +1,3 @@
+add_executable(af_bench af_bench.cpp)
+target_link_libraries(af_bench PRIVATE adapter_fabric)
+af_enable_strict_warnings(af_bench)

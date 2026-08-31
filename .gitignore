@@ -1,0 +1,12 @@
+build*/
+install/
+consumer/build/
+*.obj
+*.pdb
+*.lib
+*.dll
+*.exe
+.vs/
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json

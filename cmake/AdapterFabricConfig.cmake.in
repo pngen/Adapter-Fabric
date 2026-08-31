@@ -1,0 +1,13 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+if(NOT DEFINED ADAPTER_FABRIC_ENABLE_CUDA)
+  set(ADAPTER_FABRIC_ENABLE_CUDA @ADAPTER_FABRIC_HAS_CUDA@)
+endif()
+if(ADAPTER_FABRIC_ENABLE_CUDA)
+  find_dependency(CUDAToolkit)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/AdapterFabricTargets.cmake")
+
+check_required_components(AdapterFabric)
